@@ -7,14 +7,17 @@
 }
 :root {
   --primary-color: #000000;
-    //#E50914;
   --secondary-color: 	#564d4d;
 }
 
-html, body { height: 100%; }
+html, body {
+  height: 100%;
+
+}
 body {
   color: aliceblue;
   background-color: var(--primary-color);
+  
 
 }
 main {
