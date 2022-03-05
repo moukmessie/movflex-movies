@@ -11,26 +11,23 @@ import {Observable} from "rxjs";
 })
 export class MoviesService {
  movies!: MovieModel[];
+ pageString="&page=";
+
 
   constructor(private http: HttpClient) { }
 
-  getAllMovies(){
+  pageNavigation(page?: number, clickType?: 'next' | 'prev' ){
+    page=1; //page initializer
+    clickType === 'next' ? page++ : page--;
+    return "&page="+page;
+  }
+
+  getAllMovies(page:number){
     const headers = {
       'Content-Type': 'application/json',
       'Authorization' : `Bearer ${environment.apiKey}`
     };
-   //
-   //  this.http.get<MovieModel>(`${environment.apiUrl}${environment.apiKey}`,{headers})
-   //    .subscribe(data =>{
-   //      //console.log(data);
-   //      return data;
-   //    }, error => {
-   //      console.error(error);
-   //    })
-   // // return this.movies;
-     // @ts-ignore
-    return this.http.get<MovieModel[]>(`${environment.apiUrl}${environment.apiKey}`,{headers});
-
-
+    return this.http.get<MovieModel[]>(`${environment.apiUrl}${environment.apiKey}${this.pageString}${page}`,{headers});
   }
+
 }

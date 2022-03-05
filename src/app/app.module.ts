@@ -8,6 +8,8 @@ import { MoviesListComponent } from './movies-list/movies-list.component';
 import { HeaderComponent } from './header/header.component';
 import {HttpClientModule} from "@angular/common/http";
 import { SpinLoaderComponent } from './spin-loader/spin-loader.component';
+import { NavigationButtonComponent } from './navigation-button/navigation-button.component';
+import {NgxPaginationModule} from "ngx-pagination";
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import { SpinLoaderComponent } from './spin-loader/spin-loader.component';
     MovieComponent,
     MoviesListComponent,
     HeaderComponent,
-    SpinLoaderComponent
+    SpinLoaderComponent,
+    NavigationButtonComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
