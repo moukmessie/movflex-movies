@@ -5,7 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## API
 The data used comes from [ThemovieDB API](https://www.themoviedb.org/documentation/api)
 ## INSTALLATION
-Add root file `.config.ts`
+Add your api key in root file `.config.ts`
 ```typescript
 export const API_KEY = {
     theMovieKey: 'YOUR_API_KEY'
