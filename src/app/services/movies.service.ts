@@ -13,21 +13,14 @@ export class MoviesService {
  movies!: MovieModel[];
  pageString="&page=";
 
-
   constructor(private http: HttpClient) { }
-
-  pageNavigation(page?: number, clickType?: 'next' | 'prev' ){
-    page=1; //page initializer
-    clickType === 'next' ? page++ : page--;
-    return "&page="+page;
-  }
 
   getAllMovies(page:number){
     const headers = {
       'Content-Type': 'application/json',
       'Authorization' : `Bearer ${environment.apiKey}`
     };
-    return this.http.get<MovieModel[]>(`${environment.apiUrl}${environment.apiKey}${this.pageString}${page}`,{headers});
+    return this.http.get<MovieModel[]>(`${environment.apiUrl}&api_key=${environment.apiKey}${this.pageString}${page}`,{headers});
   }
 
 }

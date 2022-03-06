@@ -1,24 +1,3 @@
-<main>
-  <div class="movie" *ngFor=" let movie of movieModel">
-    <img src="https://image.tmdb.org/t/p/w1280{{movie.poster_path}}" alt="">
-    <div class="movie-infos properties">
-      <h3>{{movie.title | titlecase}}</h3>
-      <span class="age-limit"  >{{movie.vote_average}} </span>
-      <span class="year ">{{movie.release_date | date: "MMMM YYYY"}}</span>
-<!--      <span class="age-limit">13+</span>-->
-<!--     git add-->
-    </div>
-<!--    <div class="overview">-->
-<!--      <h3>Resume </h3>-->
-<!--      {{movie.overview}}-->
-<!--    </div>-->
 
-  </div>
-  <pagination-controls
-    previousLabel="Prev"
-    nextLabel="Next"
-
-    ></pagination-controls>
-</main>
 
 
