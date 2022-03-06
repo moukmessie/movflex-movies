@@ -5,6 +5,6 @@
 export const environment = {
   production: false,
   apiUrl: 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc',
-  apiKey: '3e2a3cd3ec7590b53d5d481a60738337'
+
 }
 

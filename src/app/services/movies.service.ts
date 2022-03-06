@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {environment} from "../../environments/environment";
 import {MovieModel} from "../models/movie.model";
+import {API_KEY} from "../../../.config";
 
 
 @Injectable({
@@ -16,8 +17,8 @@ export class MoviesService {
   getAllMovies(page:number){
     const headers = {
       'Content-Type': 'application/json',
-      'Authorization' : `Bearer ${environment.apiKey}`
+      'Authorization' : `Bearer ${API_KEY.theMovieKey}`
     };
-    return this.http.get<MovieModel[]>(`${environment.apiUrl}&api_key=${environment.apiKey}${this.pageString}${page}`,{headers});
+    return this.http.get<MovieModel[]>(`${environment.apiUrl}&api_key=${API_KEY.theMovieKey}${this.pageString}${page}`,{headers});
   }
 }
