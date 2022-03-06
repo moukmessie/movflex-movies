@@ -39,6 +39,7 @@ yarn-error.log
 testem.log
 /typings
 !src/environments/environment.ts
+.config.ts
 
 package-lock.json
 
