@@ -1,7 +1,8 @@
 # Movflex
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.3.
-##API
+
+## API
 The data used comes from [ThemovieDB API](https://www.themoviedb.org/documentation/api)
 ## INSTALLATION
 Add root file `.config.ts`
