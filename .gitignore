@@ -19,6 +19,8 @@ yarn-error.log
 *.launch
 .settings/
 *.sublime-workspace
+.vscode
+
 
 # Visual Studio Code
 .vscode/*
@@ -36,7 +38,9 @@ yarn-error.log
 /libpeerconnection.log
 testem.log
 /typings
-src/environments/environment.ts
+!src/environments/environment.ts
+
+package-lock.json
 
 # System files
 .DS_Store

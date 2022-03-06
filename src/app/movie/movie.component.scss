@@ -1,21 +1,4 @@
-.movie{
-
-  width: 300px;
-  margin: 1rem;
-  background-color: var(--primary-color);
-  background-size: 100% 100%;
-  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
-  position: relative;
-  cursor: pointer;
-  overflow: hidden;
-  border-radius: 3px;
-  &:hover {
-    width: 320px;
-    transition: 0.3s ease-in-out;
-    transition-delay: 0.1s ;
-   }
-}
-.movie img {
+ img {
   width: 100%;
 }
 .movie-info {
